@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import StarBackground from "./StarBackground";
-import gameimg from "/public/images/gameplay.jpg";
+import gameimg from "../components/spaceship.png";
 
 export default function About() {
   return (
