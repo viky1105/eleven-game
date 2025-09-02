@@ -7,8 +7,9 @@ const dummyNFTs = Array.from({ length: 6 }).map((_, i) => ({
   id: i + 1,
   name: `Starship #${1000 + i}`,
   trait: ["Nebula", "Quasar", "Supernova", "Wormhole"][i % 4],
-  image: `/images/nft${i + 1}.png`,
+  image: `${import.meta.env.BASE_URL}images/nft${i + 1}.png`,
 }));
+
 
 export default function NFTShowcase() {
   const [showModal, setShowModal] = useState(false);
