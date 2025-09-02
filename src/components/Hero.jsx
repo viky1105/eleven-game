@@ -62,7 +62,7 @@ export default function Hero() {
           <div className="absolute inset-0 flex items-center justify-center">
             {/* Spaceship image */}
             <img
-              src={import.meta.env.BASE_URL + "/images/spaceship.png"}
+              src={`${import.meta.env.BASE_URL}images/spaceship.png`}
               alt="Spaceship"
               className="w-80 h-80 object-contain z-10"
               style={{ position: "absolute" }}

@@ -35,7 +35,7 @@ export default function About() {
           {/* Gameplay image replaces animated spaceship path */}
           <div className="w-full h-64 md:h-80 rounded-2xl border border-white/10 bg-black/40 overflow-hidden flex items-center justify-center">
             <img
-              src={import.meta.env.BASE_URL + "/images/gameplay.jpg"}
+              src={`${import.meta.env.BASE_URL}images/gameplay.jpg`}
               alt="Gameplay"
               className="w-full h-full object-cover"
             />
