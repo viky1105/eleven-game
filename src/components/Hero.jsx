@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import heroImg from "/public/images/spaceship.png";
 import StarBackground from "./StarBackground";
 import { Link } from "react-scroll";
 
@@ -11,7 +10,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center">
       <StarBackground />
       <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-8 items-center">
-        <div>
+        <div style={{ paddingTop: "100px" }}>
           <motion.h1
             className="text-5xl md:text-7xl font-extrabold leading-tight neon"
             initial={{ opacity: 0, y: 10 }}
@@ -63,7 +62,7 @@ export default function Hero() {
           <div className="absolute inset-0 flex items-center justify-center">
             {/* Spaceship image */}
             <img
-              src={heroImg}
+              src={import.meta.env.BASE_URL + "/images/spaceship.png"}
               alt="Spaceship"
               className="w-80 h-80 object-contain z-10"
               style={{ position: "absolute" }}
