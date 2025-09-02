@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import heroImg from "/public/images/spaceship.png";
 import StarBackground from "./StarBackground";
 import { Link } from "react-scroll";
 
@@ -62,7 +63,7 @@ export default function Hero() {
           <div className="absolute inset-0 flex items-center justify-center">
             {/* Spaceship image */}
             <img
-              src="/images/spaceship.png"
+              src={heroImg}
               alt="Spaceship"
               className="w-80 h-80 object-contain z-10"
               style={{ position: "absolute" }}
