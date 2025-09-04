@@ -16,7 +16,7 @@ export default function NFTShowcase() {
   const [showForm, setShowForm] = useState(false);
   const [thankYouModal, setThankYouModal] = useState(false);
 
-  const { d, h, m, s } = useCountdown("2025-09-15T18:00:00Z");
+  const { d, h, m, s } = useCountdown("2025-09-20T18:00:00Z");
 
   return (
     <section id="nft" className="relative min-h-screen py-24">
