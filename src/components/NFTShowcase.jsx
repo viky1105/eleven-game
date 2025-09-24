@@ -100,37 +100,48 @@ export default function NFTShowcase() {
               </p>
             </div>
             <form
-              action="https://fieldgoal.io/f/fUOdFO" // Replace with your Formspree form ID
-              method="POST"
-              className="bg-white/5 border border-neonCyan/30 rounded-xl p-6 max-w-md mx-auto flex flex-col gap-4 shadow-lg"
-            >
-              <label className="text-white font-semibold">
-                X Username
-                <input
-                  type="text"
-                  name="username"
-                  required
-                  placeholder="@yourusername"
-                  className="mt-2 w-full px-4 py-2 rounded bg-black/30 border border-neonCyan/40 text-white"
-                />
-              </label>
-              <label className="text-white font-semibold">
-                Wallet Address
-                <input
-                  type="text"
-                  name="wallet"
-                  required
-                  placeholder="0x..."
-                  className="mt-2 w-full px-4 py-2 rounded bg-black/30 border border-neonCyan/40 text-white"
-                />
-              </label>
-              <button
-                type="submit"
-                className="mt-4 px-6 py-2 rounded-full bg-neonCyan/30 border border-neonCyan text-white font-bold hover:bg-neonCyan/50 shadow-glow"
-              >
-                Enter
-              </button>
-            </form>
+  onSubmit={(e) => {
+    e.preventDefault(); // stop default submission
+    // submit data to your backend / Formspree / Fieldgoal
+    fetch("https://fieldgoal.io/f/fUOdFO", {
+      method: "POST",
+      body: new FormData(e.target),
+    }).then(() => {
+      // Redirect to Twitter intent
+      const tweetText = encodeURIComponent("I just submitted my wallet to @11dimensiongame and im ready to mint the exclusive starfleet collection for free🚀. \n\n      Register here👉 https://11dimensiongame.xyz");
+      window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, "_blank");
+    });
+  }}
+  className="bg-white/5 border border-neonCyan/30 rounded-xl p-6 max-w-md mx-auto flex flex-col gap-4 shadow-lg"
+>
+  <label className="text-white font-semibold">
+    X Username
+    <input
+      type="text"
+      name="username"
+      required
+      placeholder="@yourusername"
+      className="mt-2 w-full px-4 py-2 rounded bg-black/30 border border-neonCyan/40 text-white"
+    />
+  </label>
+  <label className="text-white font-semibold">
+    Wallet Address
+    <input
+      type="text"
+      name="wallet"
+      required
+      placeholder="0x..."
+      className="mt-2 w-full px-4 py-2 rounded bg-black/30 border border-neonCyan/40 text-white"
+    />
+  </label>
+  <button
+    type="submit"
+    className="mt-4 px-6 py-2 rounded-full bg-neonCyan/30 border border-neonCyan text-white font-bold hover:bg-neonCyan/50 shadow-glow"
+  >
+    Enter
+  </button>
+</form>
+
           </>
         )}
       </div>
