@@ -33,7 +33,7 @@ export default function NFTShowcase() {
               {d}d : {h}h : {m}m : {s}s
             </p>
           </div>
-          <iframe id='iframe-widget' src='https://0xf48d35a1486b0cfeee7a179cbbf894824608b0e6_2741.nfts2.me/?widget=classic&hideBanner=true' style="height: 515px; width: 100%; border: none"></iframe>
+          
         </div>
 
         {/* Grid */}
