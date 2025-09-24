@@ -16,7 +16,7 @@ export default function NFTShowcase() {
   const [showForm, setShowForm] = useState(false);
   const [thankYouModal, setThankYouModal] = useState(false);
 
-  const { d, h, m, s } = useCountdown("2025-09-20T18:00:00Z");
+  const { d, h, m, s } = useCountdown("2025-10-01T18:00:00Z");
 
   return (
     <section id="nft" className="relative min-h-screen py-24">
@@ -33,6 +33,7 @@ export default function NFTShowcase() {
               {d}d : {h}h : {m}m : {s}s
             </p>
           </div>
+          <iframe id='iframe-widget' src='https://0xf48d35a1486b0cfeee7a179cbbf894824608b0e6_2741.nfts2.me/?widget=classic&hideBanner=true' style="height: 515px; width: 100%; border: none"></iframe>
         </div>
 
         {/* Grid */}
