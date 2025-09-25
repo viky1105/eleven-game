@@ -6,7 +6,15 @@ export default function Footer() {
         <div className="flex items-center gap-6">
           <a className="hover:text-neonCyan" href="https://x.com/11dimensiongame" aria-label="X/Twitter">X</a>
           <a className="hover:text-neonPink" href="https://discord.gg/nf3xbd4bnW" aria-label="Discord">Discord</a>
-          <a className="hover:text-neonCyan" href="Intergalactic.pdf" aria-label="Whitepaper">Whitepaper</a>
+           <a
+            className="hover:text-neonCyan"
+            href="/Intergalactic.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Whitepaper"
+          >
+            Whitepaper
+          </a>
           <span className="text-white/50 text-sm">Powered by Abstract</span>
         </div>
       </div>
