@@ -5,7 +5,7 @@ import StarBackground from "./StarBackground";
 
 const dummyNFTs = Array.from({ length: 6 }).map((_, i) => ({
   id: i + 1,
-  name: `Starship #${1000 + i}`,
+  name: `Starfleet Captain #${1000 + i}`,
   trait: ["Nebula", "Quasar", "Supernova", "Wormhole"][i % 4],
   image: `${import.meta.env.BASE_URL}images/nft${i + 1}.png`,
 }));
