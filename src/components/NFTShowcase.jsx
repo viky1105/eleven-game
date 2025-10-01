@@ -77,9 +77,11 @@ export default function NFTShowcase() {
           >
             SUBMIT WALLET
           </button>
+          <a href="https://11-dimension.nfts2.me/">
           <button className="px-6 py-3 rounded-full bg-neonPink/20 border border-neonPink hover:bg-neonPink/30">
-            Mint (Soon)
+            Mint
           </button>
+          </a>
         </div>
 
         {/* Wallet Submission Form */}
