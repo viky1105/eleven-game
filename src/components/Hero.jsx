@@ -1,11 +1,8 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import StarBackground from "./StarBackground";
 import { Link } from "react-scroll";
 
 export default function Hero() {
-  const [showModal, setShowModal] = useState(false);
-
   return (
     <section id="hero" className="relative min-h-screen flex items-center">
       <StarBackground />
@@ -37,12 +34,14 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            <button
-              className="px-6 py-3 rounded-full bg-neonPink/20 border border-neonPink hover:bg-neonPink/30 shadow-glow"
-              onClick={() => setShowModal(true)}
+            <a
+              href="http://game.11dimensiongame.xyz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 rounded-full bg-neonPink/20 border border-neonPink hover:bg-neonPink/30 shadow-glow"
             >
               Play Game
-            </button>
+            </a>
             <Link to="about" smooth duration={700} offset={-70}>
               <button className="px-6 py-3 rounded-full bg-neonCyan/20 border border-neonCyan hover:bg-neonCyan/30 shadow-glow">
                 About the Game
@@ -73,31 +72,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-
-      {/* Modal */}
-      {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-            className="bg-gradient-to-br from-neonCyan/30 to-neonPink/30 rounded-2xl p-10 shadow-2xl text-center border border-white/10"
-          >
-            <h3 className="text-3xl font-extrabold mb-4 text-neonPink drop-shadow-glow">
-              Hold on explorer,
-            </h3>
-            <p className="text-lg text-white/90 mb-6">
-              The game is on the way!
-            </p>
-            <button
-              className="px-6 py-2 rounded-full bg-neonCyan/30 border border-neonCyan text-white font-bold hover:bg-neonCyan/50 shadow-glow"
-              onClick={() => setShowModal(false)}
-            >
-              Close
-            </button>
-          </motion.div>
-        </div>
-      )}
     </section>
   );
 }
